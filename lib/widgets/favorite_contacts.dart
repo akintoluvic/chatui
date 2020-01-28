@@ -45,20 +45,20 @@ class FavoriteContacts extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
                   onTap: () => Navigator.push(
-                  context, 
-                  MaterialPageRoute(
-                    builder: (_) => ChatScreen(
-                      user: favorites[index],
-                    ),
-                  )
-                  ),
-                                  child: Padding(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => ChatScreen(
+                          user: favorites[index],
+                        ),
+                      )),
+                  child: Padding(
                     padding: EdgeInsets.all(10.0),
                     child: Column(
                       children: <Widget>[
                         CircleAvatar(
                           radius: 35.0,
-                          backgroundImage: AssetImage(favorites[index].imageUrl),
+                          backgroundImage:
+                              AssetImage(favorites[index].imageUrl),
                         ),
                         SizedBox(
                           height: 6.0,
