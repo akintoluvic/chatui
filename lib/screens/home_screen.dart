@@ -11,6 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).primaryColor,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.menu),
@@ -18,22 +19,34 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.white,
           onPressed: () {},
         ),
-        title: Text('Chats', style: TextStyle(
-          fontSize: 28.0,
-          fontWeight: FontWeight.bold
-        ),),
+        title: Text(
+          'Chats',
+          style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+        ),
         actions: <Widget>[
           IconButton(
-          icon: Icon(Icons.search),
-          iconSize: 30.0,
-          color: Colors.white,
-          onPressed: () {},
-        ),
+            icon: Icon(Icons.search),
+            iconSize: 30.0,
+            color: Colors.white,
+            onPressed: () {},
+          ),
         ],
       ),
-      body: Column(children: <Widget>[
-        CategorySelector(),
-      ],),
+      body: Column(
+        children: <Widget>[
+          CategorySelector(),
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).accentColor,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.0),
+                    topRight: Radius.circular(30.0),
+                  )),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

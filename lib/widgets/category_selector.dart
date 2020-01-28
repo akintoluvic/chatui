@@ -6,7 +6,6 @@ class CategorySelector extends StatefulWidget {
 }
 
 class _CategorySelectorState extends State<CategorySelector> {
-  
   int selectedIndex = 0;
 
   final List<String> categories = ['Messages', 'Online', 'Groups', 'Requests'];
@@ -26,14 +25,17 @@ class _CategorySelectorState extends State<CategorySelector> {
                 selectedIndex = index;
               });
             },
-                      child: Padding(
+            child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
-              child: Text(categories[index], style: TextStyle(
-                color: index == selectedIndex ? Colors.white : Colors.white60,
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.2
-              ),),
+              child: Text(
+                categories[index],
+                style: TextStyle(
+                    color:
+                        index == selectedIndex ? Colors.white : Colors.white60,
+                    fontSize: 20.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 1.2),
+              ),
             ),
           );
         },
