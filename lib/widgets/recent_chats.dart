@@ -32,6 +32,13 @@ class RecentChats extends StatelessWidget {
                   horizontal: 20.0,
                   vertical: 10.0
                 ),
+                decoration: BoxDecoration(
+                  color: chat.unread ? Color(0xFFFFEFFE) : Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(20.0),
+                    bottomRight: Radius.circular(20.0)
+                  )
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
