@@ -5,9 +5,7 @@ class FavoriteContacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        vertical: 10.0
-      ),
+      padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Column(
         children: <Widget>[
           Padding(
@@ -52,14 +50,17 @@ class FavoriteContacts extends StatelessWidget {
                         radius: 35.0,
                         backgroundImage: AssetImage(favorites[index].imageUrl),
                       ),
-                      SizedBox(height: 6.0,),
+                      SizedBox(
+                        height: 6.0,
+                      ),
                       Text(
-                        favorites[index].name, 
+                        favorites[index].name,
                         style: TextStyle(
                           color: Colors.blueGrey,
                           fontSize: 16.0,
                           fontWeight: FontWeight.w600,
-                        ),)
+                        ),
+                      )
                     ],
                   ),
                 );
